@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Funding in Ghana</title>
+	<link rel="icon" type="icon" href="img/logo/heartbeat_logo.png">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<?php
+	session_start();
+	$connection = mysqli_connect("localhost","root","","UHF");
+	$username = $_SESSION['username'];
+	?>
+	
+	<nav class="sticky">
+	<nav class="navigation">
+			<div class="hamburger_icon" onclick="HamburgerToggle()">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+			<img class="company_logo" src="img/logo/company_logo2.png">
+	</nav>
+	<nav class="hamburger_menu">
+		<ul>
+			<li onclick="Login_Home()"><img src="img/icon/white-home-icon.png">Home</li>
+			<li onclick="Login_About()"><img src="img/icon/white-about-icon.png">About</li>
+			<li onclick="Login_Contact()"><img src="img/icon/contact-icon.png">Contact</li>
+			<li onclick="Login_Shop()"><img src="img/icon/cart.png">Shop</li>
+			<li onclick="Login_JoinUs()"><img src="img/icon/heart.png">Join Us</li>
+			<li onclick="ProfilePage()"><img src="img/icon/unknown.jpg"><p id="profile_name">Profile
+				<?php
+				echo 
+				"<script>
+					let pn = document.getElementById('profile_name');
+					pn.textContent = '$username';
+				</script>"
+				?>
+			</p>
+			</li>
+
+		</ul>
+	</nav>
+	</nav>
+	<!-- Blur -->
+	<div class="profile-blur">
+		<div class="article-text">
+			<img src="img/article/ghana.jpg">
+			<h1>Abstract</h1>
+			<p>
+				Sub-Saharan Africa is experiencing a growth in the number of children who need formal alternative care. One of the principal factors contributing to this is orphanhood. While most orphans live with their extended families, many end up in privately-run orphanages that operate outside of the government's regulation and funding. Without government assistance and being the most costly care option, the orphanages have to come up with mechanisms to get the finances that they need. However, relatively little evidence exists on the funding streams of orphanages in sub-Saharan Africa. Drawing on the literature from Ghana and other low-income countries, the study explores the funding of orphanages and its implications for orphans in Ghana. The evidence from the literature shows that the funding for most orphanages comes from donations by private organisations and individuals, mostly from the developed world. This funding system is generally unsustainable and carries negative ramifications for the social-emotional progress and rights of orphans residing in orphanages, such as abuse, unnecessary institutionalisation, and stigma. Policy and practice recommendations include increasing government's subsidy to the orphanages, regulating donations to and volunteering in orphanages, and helping unlicensed orphanages to transition to the provision of family-strengthening services.
+			</p>
+			<br><br>
+			<h1>Introduction</h1>
+			<p>
+				Worldwide, about 140 million children are identified as orphans as they have lost one or both parents (Huynh, 2019). Of this global figure, over a quarter (52 million) live in Africa (Nar, 2020). The children may have been orphaned by HIV/AIDS, conflicts, disasters and famine, leading to several authors suggesting that the continent has an orphan crisis (Drah, 2012; Lombe & Ochumbo, 2008). Furthermore, other African children, often referred to as social orphans, are orphaned on account of abandonment and poverty (Abebe, 2009). The estimated number of orphans in Ghana as of 2012 was 1.1 million (UNICEF, 2012).
+				<br><br>
+				Traditionally, the care of orphans in Ghana is the collective responsibility of extended families and community members (Atobrah, 2016; Kuyini, Alhassan, Tollerud, Weld, & Haruna, 2009). However, in recent years, socio-economic issues such as poverty and migration have made many informal carers, often older women with health challenges and no reliable income, reluctant or unable to absorb the responsibility of caring for orphans (Drah, 2014; Imoh, 2012). Apart from the health and financial reasons, HIV/AIDS orphans are repeatedly rejected by family members because of the stigma attached to the disease (Voyk, 2011). Consequently, a growing number of orphans are without a family and on their own.
+				<br><br>
+				For orphans deprived of a family, the Convention on the Rights of the Child (CRC) places a mandate on state parties to offer quality alternative care and protection (Wijemanne, 2017). Like other African countries, the main formal alternative care option for orphans in Ghana is residential care, commonly called orphanages (Frimpong-Manso & Kpei Mawudoku, 2017; Desmond, Watt, Saha, Huang, & Lu, 2020; Petrowski, Cappa, & Gross, 2017). In 2013, orphanages operating in Ghana totalled 114, the majority of which were run and financed by non-governmental and faith-based organisations (Frimpong-Manso & Kpei Mawudoku, 2017). Most of the privately-run orphanages are unregistered with the Department of Social Welfare (DSW), the statutory body responsible for licensing orphanages in Ghana (Better Care Network & UNICEF, 2015).
+				<br><br>
+				Despite the existing evidence suggesting that residential care is the most expensive alternative care option (Santa-Ana-Tellez, DeMaria, & Galárraga, 2011), private orphanages in Ghana do not receive funding from the state to cover their costs (Better Care Network & UNICEF, 2015). Therefore, most orphanages have to devise mechanisms to access funding to support the children under their care (Galama, 2010). However, relatively little is known about the funding streams’ impact on the experience and well-being of orphans (Roche, 2019, p. 43). It is this gap in the literature that the current article seeks to fill.
+				<br><br>
+				Drawing on the literature from Ghana and other low-income countries, this paper presents evidence on the various sources and strategies used by orphanages to raise funds. Furthermore, it discusses the implications that the funding mechanisms of the orphanages have on the care and well-being of orphans living in these institutions. Finally, the paper offers some recommendations to inform both policy and practice.
+			</p>
+			<br><br>
+			<h1>Section snippets</h1>
+			<br>
+			<h2>Methodology</h2>
+			<p>I undertook a review from March to September 2019 to identify and synthesize evidence on the funding strategies used by orphanages and their implications for orphans. Because of the paucity of the research on the topic, it took various steps to search for relevant literature from Ghana and other low-income countries. Both published and unpublished research, including peer-reviewed articles, theses and conference papers, were located through various electronic databases: Oxford Journals Online.</p>
+			<br>
+			<h2>Funding streams of orphanages</h2>
+			<p>Orphanages in Ghana get their funding from a variety of sources. As discussed in the previous section, the government provides funds for just the state-owned homes, yet this is generally inadequate to meet their expenditure. While estimates are unavailable, anecdotal evidence suggests that the annual budget of an orphanage in Ghana is up to US$70,000 (African Press International, 2009). However in 2012, for example, the government's funding for the public orphanages was GH₵6000 (US$3000)</p>
+			<br>
+			<h2>Implications of the funding structures on the children's well-being</h2>
+			<p>
+			The next section discusses the implications that the funding structures of the orphanages have on the well-being of the children in the institutions, including the unnecessary institutionalisation of children, abuse, stigma and unmet emotional and material needs</p>
+			<br>
+			<h2>Lessons learned and recommendations</h2>
+			<p>The review of the literature has revealed several lessons. First, the orphanages current dependence on international donations and volunteer efforts is largely unsustainable. The financial resources coming from donors are rarely guaranteed while the volunteers’ presence in the orphanages is only for short periods. This lack of steady income source causes financial issues which creates poor living conditions and human rights violations for the orphans. The overdependence on donations has given</p>
+			<br><br>
+			<h1>Conclusion</h1>
+			<p>A major form of alternative care for orphans in Ghana is residential care. It is the government's mandate to ensure that there are appropriate financial resources to cover the cost of caring for orphans in these institutions. However, at the moment, Ghana is outsourcing this responsibility to foreign individuals and organisations due to the dependence on their donations and gifts. By doing so, the welfare of vulnerable children in Ghana has become a charity rather than a mandatory entitlement
+			<br><br>
+			<h1>Article By</h1>
+			<p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0732118X20302105">https://www.sciencedirect.com/science/article/abs/pii/S0732118X20302105</a></p>
+		</div>
+		
+	
+	<!-- Footer -->
+	<footer>
+		<div class="footer_wrapper">
+			<div class="footer_section footer_spacebetween">
+				<div class="footer_container">
+					<h3>Using this site:</h3>
+					<br>
+					<p>Welcome to UnitedHope Foundation, a platform committed to fostering compassion, unity, and support. In times of distress, it is essential that we come together to extend our solidarity. Our hearts go out to the affected communities, and we stand in support of those facing unimaginable challenges. We believe in the power of collective efforts to make a positive impact. Join us as we strive to provide aid, raise awareness, and contribute to the well-being of those in need. Together, we can make a difference, promote understanding, and work towards a more peaceful world.</p>
+				</div>
+
+				<div class="footer_container footer_social_media">
+					<h4>Connect with us on social media:</h4>
+					<br>
+				    <ul>
+				        <li><a href="https://www.facebook.com/" ><img src="img/social_media/facebook1.png">Facebook</a></li>
+				        <li><a href="https://www.instagram.com" ><img src="img/social_media/instagram1.png">Instagram</a></li>
+				        <li><a href="https://wa.me/0182727119" ><img src="img/social_media/whatsapp1.png">Whatsapp</a></li>
+				     </ul>
+				</div>
+				
+			</div>
+		</div>
+		
+	<p class="text-center">&copy; 2023 UnitedHope Foundation | All rights reserved.</p>
+	</footer>
+	</div>
+		
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
